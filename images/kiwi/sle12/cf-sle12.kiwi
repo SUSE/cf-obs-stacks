@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<image schemaversion="6.1" name="cf-sle12">
+  <description type="system">
+    <author>Dimitris Karakasilis</author>
+    <contact>DKarakasilis@suse.com</contact>
+    <specification>CloudFoundry root filesystem based on SLE</specification>
+  </description>
+  <preferences>
+    <type image="docker" container="cfsusefs2">
+      <machine>
+        <vmdisk/>
+        <vmnic interface="eth0" mode="veth"/>
+      </machine>
+    </type>
+    <version>1.0.1</version>
+    <packagemanager>zypper</packagemanager>
+    <rpm-check-signatures>false</rpm-check-signatures>
+    <rpm-force>true</rpm-force>
+    <rpm-excludedocs>true</rpm-excludedocs>
+    <locale>en_US</locale>
+    <keytable>us.map.gz</keytable>
+    <hwclock>utc</hwclock>
+  </preferences>
+  <users group="root">
+    <user home="/root" name="root"/>
+  </users>
+  <repository>
+    <source path="obsrepositories:/"/>
+  </repository>
+  <packages type="image">
+    <package name="ca-certificates"/>
+    <package name="ca-certificates-mozilla"/>
+    <package name="coreutils"/>
+    <package name="iputils"/>
+    <package name="suse-build-key"/>
+
+    <package name="ncurses"/>
+    <package name="ncurses-utils"/>
+    <package name="tack"/>
+
+    <!-- CF packages -->
+    <package name="autoconf"/>
+    <package name="bind"/>
+    <package name="bison"/>
+    <package name="make"/>
+    <package name="gcc"/>
+    <package name="glibc-devel"/>
+    <package name="gcc-c++"/>
+    <package name="bzr"/>
+    <package name="ca-certificates"/>
+    <package name="cmake"/>
+    <package name="cron"/>
+    <package name="curl"/>
+    <package name="dmidecode"/>
+    <package name="bind-utils"/>
+    <package name="fakeroot"/>
+    <package name="flex"/>
+    <package name="fontconfig"/>
+    <package name="gdb"/>
+    <package name="git-core"/>
+    <package name="ImageMagick"/>
+    <package name="iproute2"/>
+    <package name="arping2"/>
+    <package name="jq"/>
+    <!-- laptop-detect is an ubuntu only package. TODO: Find an alternative if
+         this is realy needed.
+         <package name="laptop"/>
+    -->
+    <package name="less"/>
+    <package name="libaio1"/>
+    <package name="libatk-1_0-0"/>
+    <package name="libatm1"/>
+    <package name="libavahi-client3"/>
+    <package name="libavahi-common3"/>
+    <package name="libbz2-devel"/>
+    <package name="libcairo2"/>
+    <package name="libcap-progs"/>
+    <package name="perl-Class-Accessor"/>
+    <package name="libcurl4"/>
+    <package name="libcurl-devel"/>
+    <package name="libdatrie1"/>
+    <package name="libdirectfb-1_7-1"/>
+    <package name="libdjvulibre-devel"/>
+    <package name="libdjvulibre21"/>
+    <package name="libdrm_intel1"/>
+    <package name="libdrm_nouveau2"/>
+    <package name="libdrm_radeon1"/>
+    <package name="fuse-devel"/>
+    <package name="libfuse2"/>
+    <package name="gmp-devel"/>
+    <package name="gpm"/>
+    <package name="graphviz-devel"/>
+    <package name="libgtk-3-0"/>
+    <package name="gtk3"/>
+    <package name="libicu-devel"/>
+    <package name="ilmbase-devel"/>
+    <package name="libIlmThread-2_1-11"/>
+    <package name="libHalf11"/>
+    <package name="libIex-2_1-11"/>
+    <package name="libImath-2_1-11"/>
+    <package name="perl-IO-String"/>
+    <package name="lapack-devel"/>
+    <package name="ncurses-devel"/>
+    <package name="libnl3-200"/>
+    <package name="openblas-devel"/>
+    <package name="openexr-devel"/>
+    <package name="libpango-1_0-0"/>
+    <package name="libpixman-1-0"/>
+    <package name="libipq-devel"/>
+    <package name="readline-devel"/>
+    <package name="cyrus-sasl-devel"/>
+    <package name="libsigc++2"/>
+    <package name="sqlite2-devel"/>
+    <package name="sqlite3-devel"/>
+    <package name="perl-Sub-Name"/>
+    <package name="sysfsutils"/>
+    <package name="libthai-data"/>
+    <package name="libthai"/>
+    <package name="xapian-core"/>
+    <package name="libxcb-render-util0"/>
+    <package name="libxcb-render0"/>
+    <package name="libXcomposite1"/>
+    <package name="libXcursor1"/>
+    <package name="libXdamage1"/>
+    <package name="libXfixes3"/>
+    <package name="libXft2"/>
+    <package name="libXi6"/>
+    <package name="libXinerama1"/>
+    <package name="libxml2"/>
+    <package name="libxml2-devel"/>
+    <package name="libXrandr2"/>
+    <package name="libXrender1"/>
+    <package name="libxslt-devel"/>
+    <package name="libxslt"/>
+    <package name="libXt-devel"/>
+    <package name="libXt6"/>
+    <package name="libyaml-devel"/>
+    <package name="lsof"/>
+    <package name="xz"/>
+    <package name="mercurial"/>
+    <package name="openssh"/>
+    <package name="openssl"/>
+    <package name="psmisc"/>
+    <package name="python"/>
+    <package name="quota"/>
+    <package name="rsync"/>
+    <package name="shared-mime-info"/>
+    <package name="sshfs"/>
+    <package name="strace"/>
+    <package name="subversion"/>
+    <package name="sysstat"/>
+    <package name="tcpdump"/>
+    <package name="traceroute"/>
+    <package name="dejavu-fonts"/>
+    <package name="unzip"/>
+    <package name="uuid-devel"/>
+    <package name="wget"/>
+    <package name="zip"/>
+    <package name="ruby2.3"/>
+    <package name="ruby2.3-rubygem-gem2rpm"/>
+    <package name="ruby2.3-rubygem-bundler"/>
+    <package name="sudo"/>
+    <package name="aws-cli"/>
+    <package name="libopenssl-devel"/>
+    <package name="openldap2-devel"/>
+    <package name="pcre-devel"/>
+    <package name="aspell-devel"/>
+    <package name="libc-client2007e_suse"/>
+    <package name="libexpat-devel"/>
+    <package name="gdbm-devel"/>
+    <package name="gmp-devel"/>
+    <package name="openldap2-devel"/>
+    <package name="libldb-devel"/>
+    <package name="libmcrypt-devel"/>
+    <package name="libpng12-devel"/>
+    <package name="libpng12-compat-devel"/>
+    <package name="libpspell15"/>
+    <package name="readline-devel"/>
+    <package name="sqlite3-devel"/>
+    <package name="libopenssl-devel"/>
+    <package name="libxml2-devel"/>
+    <package name="libzip-devel"/>
+    <package name="automake"/>
+    <package name="freetype2-devel"/>
+    <package name="libxslt-devel"/>
+    <package name="libGeoIP-devel"/>
+    <package name="ImageMagick-devel"/>
+    <package name="cyrus-sasl-devel"/>
+    <package name="imap-devel"/>
+    <package name="krb5-devel"/>
+    <package name="net-snmp-devel"/>
+    <package name="libuv-devel"/>
+    <package name="freetds-devel"/>
+    <package name="postgresql-devel"/>
+    <package name="libmemcached11"/>
+    <package name="util-linux-systemd"/>
+    <package name="netcat-openbsd"/>
+    <package name="which"/>
+    <package name="libmysqlclient-devel"/>
+    <!-- We need this for the PHP buildpack. Remove this when we fix our recipes and stack so that we can install it at build time -->
+    <package name="libgearman-devel"/>
+    <package name="libmemcachedutil2"/>
+    <!-- Keep updated version of glib2 for .NETcore dependencies -->
+    <package name="glib2-devel" />
+    <!-- Needed for .NETcore dependencies -->
+    <package name="libjbig-devel" />
+    <package name="libjbig2" />
+    <package name="libexif12" />
+    <package name="libexif-devel" />
+    <package name="cairo-devel" />
+    <package name="libtiff-devel" />
+  </packages>
+  <packages type="bootstrap">
+    <package name="filesystem"/>
+    <package name="glibc-locale"/>
+    <!-- kiwi is not able to pull these packages automatically -->
+    <package name="acl"/>
+    <package name="cracklib-dict-small"/>
+    <package name="dbus-1"/>
+    <package name="dracut"/>
+    <package name="elfutils"/>
+    <package name="fipscheck"/>
+    <package name="kbd"/>
+    <package name="kmod"/>
+    <package name="pam-config"/>
+    <package name="pkg-config"/>
+    <package name="sg3_utils"/>
+    <package name="sles-release"/>
+    <package name="sles-release-POOL"/>
+    <package name="systemd-presets-branding-SLE"/>
+  </packages>
+  <packages type="delete">
+    <package name="aaa_base"/>
+    <package name="dbus-1"/>
+    <package name="dracut"/>
+    <package name="fipscheck"/>
+    <package name="kbd"/>
+    <package name="kmod"/>
+    <package name="sg3_utils"/>
+    <package name="systemd-presets-branding-SLE"/>
+    <package name="systemd-sysvinit"/>
+    <package name="udev"/>
+  </packages>
+</image>
