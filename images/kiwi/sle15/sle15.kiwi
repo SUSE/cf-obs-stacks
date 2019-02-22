@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.8" name="cfsle15fs">
+<image schemaversion="6.8" name="sle15">
   <description type="system">
     <author>Tim Hardeck</author>
     <contact>thardeck@suse.de</contact>
@@ -9,7 +9,7 @@
   <preferences>
     <type image="docker">
       <containerconfig
-        name="cfsle15fs"
+        name="sle15"
         tag="latest"
         maintainer="Tim Hardeck &lt;thardeck@suse.de&gt;"/>
     </type>
