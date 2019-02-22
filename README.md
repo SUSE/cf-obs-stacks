@@ -1,4 +1,4 @@
-# cf-obs-stacks
+# [![Build Status](https://travis-ci.org/SUSE/cf-obs-stacks.svg?branch=master)](https://travis-ci.org/SUSE/cf-obs-stacks) cf-obs-stacks
 
 Here you can find all specs used to build our stacks and metapackages in OBS.
 
