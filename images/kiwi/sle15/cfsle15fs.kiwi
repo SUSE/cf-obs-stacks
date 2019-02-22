@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<image schemaversion="6.8" name="cfsle15fs">
+  <description type="system">
+    <author>Tim Hardeck</author>
+    <contact>thardeck@suse.de</contact>
+    <specification>CloudFoundry root filesystem based on SUSE Linux Enterprise</specification>
+  </description>
+  <preferences>
+    <type image="docker">
+      <containerconfig
+        name="cfsle15fs"
+        tag="latest"
+        maintainer="Tim Hardeck &lt;thardeck@suse.de&gt;"/>
+    </type>
+    <version>0.90.0</version>
+    <packagemanager>zypper</packagemanager>
+    <!--<rpm-check-signatures>false</rpm-check-signatures>-->
+    <rpm-excludedocs>true</rpm-excludedocs>
+  </preferences>
+  <repository>
+    <source path="obsrepositories:/"/>
+  </repository>
+  <packages type="image">
+    <package name="ca-certificates"/>
+    <package name="ca-certificates-mozilla"/>
+    <package name="coreutils"/>
+    <package name="suse-build-key"/>
+    <package name="krb5"/>
+    <package name="netcfg"/>
+    <package name="kubic-locale-archive"/>
+    <package name="tack"/>
+    <package name="dracut"/>
+    <package name="sudo"/>
+    
+  <!-- Is part of cflinuxfs3 but separate package in SUSE distributions -->
+    <package name="which"/>
+    
+  <!-- Is part of https://github.com/cloudfoundry/cflinuxfs3/blob/master/cflinuxfs3/cflinuxfs3_receipt but not of the definition so adding manually -->
+    <package name="libexpat-devel"/>
+    <package name="libpng-devel"/> 
+    <package name="postgresql-devel"/>
+    <package name="gcc-c++"/>
+    <package name="libcairo2"/>
+    <package name="tar"/>
+    <package name="bzip2"/>
+    <package name="mawk"/>    
+
+  <!-- CF packages - https://github.com/cloudfoundry/cflinuxfs3/blob/master/packages/cflinuxfs3 -->
+    <package name="autoconf"/>
+    <package name="bison"/>
+    <package name="bzr"/>
+    <package name="ca-certificates"/>
+    <package name="cmake"/>
+    <!-- comerr-dev -->
+    <package name="cron"/>
+    <package name="curl"/>
+    <!-- dh-python should be debian specific -->
+    <package name="bind-utils"/>
+    <package name="fakeroot"/>
+    <package name="file"/>
+    <package name="flex"/>
+    <package name="gdb"/>
+    <package name="git-core"/>
+    <package name="gpg2"/>
+    <package name="ghostscript-fonts"/>
+    <!-- gss-ntlmssp-dev -->
+    <package name="iproute2"/>
+    <package name="arping2"/>
+    <package name="ImageMagick"/>
+    <package name="iputils"/>
+    <package name="jq"/>
+    <package name="krb5"/>
+    <package name="libaio1"/>
+    <package name="perl-Archive-Extract"/>    
+    <package name="libargon2-1"/>
+    <package name="libatm1"/>
+    <package name="libaudiofile1"/>
+    <package name="libavcodec57"/>
+    <package name="libblas3"/>
+    <!-- libcdt5 -->
+    <!-- libcgraph6 -->
+    <!-- libcloog -->
+    <package name="libcurl-devel"/>
+    <package name="libestr0"/>
+    <package name="libffi-devel"/>
+    <package name="libfl-devel"/>
+    <package name="libfribidi0"/>
+    <package name="libgcrypt-devel"/>
+    <package name="gdk-pixbuf-devel"/>
+    <package name="gmp-devel"/>
+    <package name="libgnutls-devel"/>
+    <package name="libgnutlsxx-devel"/>
+    <package name="libgnutlsxx28"/>
+    <package name="libgpg-error-devel"/>
+    <!-- libgvpr2 -->
+    <package name="libicu-devel"/>
+    <package name="libidn-devel"/>
+    <package name="libjson-glib-1_0-0"/>
+    <package name="krb5-devel"/>
+    <package name="lapack-devel"/>
+    <package name="openldap2-devel"/>
+    <!-- TODO check if version 5 is an issue and if so backport 6 -->
+    <package name="libLLVM5"/>
+    <!-- liblockfile-bin -->
+    <!-- liblockfile1 -->
+    <!-- liblog-message-simple-perl -->
+    <package name="libmagic1"/>
+    <package name="libMagick++-devel"/>
+    <package name="libmariadb-devel"/>
+    <package name="libmariadb-devel"/>
+    <package name="perl-Module-Pluggable"/>
+    <package name="ncurses-devel"/>
+    <!-- libnih-dbus1 -->
+    <package name="liborc-0_4-0"/>
+    <package name="libp11-devel"/>
+    <package name="pam_cap"/>
+    <package name="libpango-1_0-0"/>
+    <!-- libpathplan4 -->
+    <package name="libpqxx-devel"/>
+    <package name="libproxy1"/>
+    <package name="readline-devel"/>
+    <!-- librtmp-dev -->
+    <package name="cyrus-sasl-devel"/>
+    <package name="cyrus-sasl-crammd5"/>
+    <package name="cyrus-sasl-digestmd5"/>
+    <package name="cyrus-sasl-plain"/>
+    <package name="cyrus-sasl-ntlm"/>
+    <package name="cyrus-sasl-gssapi"/>
+    <package name="cyrus-sasl-gs2"/>
+    <package name="cyrus-sasl-scram"/>
+    <package name="libselinux-devel"/>
+    <package name="sqlite3-devel"/>
+    <package name="libopenssl-devel"/>
+    <package name="sysfsutils"/>
+    <package name="libtasn1-devel"/>
+    <package name="perl-Term-UI"/>
+    <package name="libustr-1_0-1"/>
+    <!-- libxdot4 -->
+    <package name="libxslt-devel"/>
+    <package name="libyaml-devel"/>
+    <package name="logrotate"/>
+    <package name="lsof"/>
+    <package name="xz"/>
+    <package name="man"/>
+    <package name="mercurial"/>
+    <package name="net-tools"/>
+    <!-- ocaml-base-nox -->
+    <package name="openssh"/>
+    <package name="libopenssl1_0_0"/>
+    <package name="psmisc"/>
+    <package name="quota"/>
+    <package name="rsync"/>
+    <package name="ruby"/>
+    <package name="sshfs"/>
+    <package name="strace"/>
+    <package name="subversion"/>
+    <package name="sysstat"/>
+    <!-- tasksel is debian specific -->
+    <package name="tcpdump"/>
+    <package name="traceroute"/>
+    <package name="dejavu-fonts"/>
+    <package name="unzip"/>
+    <!-- ureadahead -->
+    <package name="uuid-devel"/>
+    <package name="wget"/>
+    <package name="zip"/>
+  </packages>
+  <packages type="bootstrap">
+    <package name="aaa_base"/>
+    <package name="cracklib-dict-small"/>
+    <package name="filesystem"/>
+    <package name="sles-release"/>
+    <package name="shadow"/>
+  </packages>
+  <packages type="delete">
+    <package name="aaa_base"/>
+    <package name="dbus-1"/>
+    <package name="dracut"/>
+    <package name="fipscheck"/>
+    <package name="kbd"/>
+    <package name="kmod"/>
+    <package name="sg3_utils"/>
+    <package name="systemd-sysvinit"/>
+  </packages>
+</image>
