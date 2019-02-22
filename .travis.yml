@@ -1,0 +1,6 @@
+language: minimal
+branches:
+  only:
+  - master
+script:
+  - bash ci/trigger_obs_services.sh
