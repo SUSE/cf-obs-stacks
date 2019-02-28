@@ -69,4 +69,14 @@ ln -s /home/vcap/app /app
 # Fix the shebang line of installed gems to use '/usr/bin/env ruby' instead of the versioned ruby
 echo "custom_shebang: /usr/bin/env ruby" >> /etc/gemrc
 
+# libuv1 is in the cflinuxfs3 stack
+# but Aspnetcore seems to require libuv.so which is a symlink
+# that we ship only in libuv-devel
+# https://github.com/aspnet/libuv-build/blob/ecd5b95c3ad660856c9009ca4fe8bb420e86a92d/makefile.shade#L96
+
+if [ ! -L "/usr/lib64/libuv.so" ]
+then
+  ln -s /usr/lib64/libuv.so.1.0.0 /usr/lib64/libuv.so
+fi
+
 exit 0
