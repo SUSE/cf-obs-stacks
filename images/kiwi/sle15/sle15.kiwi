@@ -45,6 +45,7 @@
     <package name="tar"/>
     <package name="bzip2"/>
     <package name="mawk"/>    
+    <package name="netcat-openbsd"/>
 
   <!-- CF packages - https://github.com/cloudfoundry/cflinuxfs3/blob/master/packages/cflinuxfs3 -->
     <package name="autoconf"/>
