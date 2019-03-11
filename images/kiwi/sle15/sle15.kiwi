@@ -13,7 +13,7 @@
         tag="latest"
         maintainer="Tim Hardeck &lt;thardeck@suse.de&gt;"/>
     </type>
-    <version>0.90.0</version>
+    <version>1.0.0</version>
     <packagemanager>zypper</packagemanager>
     <!--<rpm-check-signatures>false</rpm-check-signatures>-->
     <rpm-excludedocs>true</rpm-excludedocs>
@@ -33,22 +33,21 @@
     <package name="dracut"/>
     <package name="sudo"/>
 
-  <!-- Force update of python to provide a version with ssl support -->
-    <package name="python"/>
-    
   <!-- Is part of cflinuxfs3 but separate package in SUSE distributions -->
     <package name="which"/>
     
   <!-- Is part of https://github.com/cloudfoundry/cflinuxfs3/blob/master/cflinuxfs3/cflinuxfs3_receipt but not of the definition so adding manually -->
     <package name="libexpat-devel"/>
-    <package name="libpng-devel"/> 
+    <package name="libpng-devel"/>
     <package name="postgresql-devel"/>
     <package name="gcc-c++"/>
     <package name="libcairo2"/>
     <package name="tar"/>
     <package name="bzip2"/>
-    <package name="mawk"/>    
+    <package name="mawk"/>
     <package name="netcat-openbsd"/>
+    <!-- The python package is required to provide a version with ssl support -->
+    <package name="python"/>
 
   <!-- CF packages - https://github.com/cloudfoundry/cflinuxfs3/blob/master/packages/cflinuxfs3 -->
     <package name="autoconf"/>
