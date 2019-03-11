@@ -32,6 +32,9 @@
     <package name="tack"/>
     <package name="dracut"/>
     <package name="sudo"/>
+
+  <!-- Force update of python to provide a version with ssl support -->
+    <package name="python"/>
     
   <!-- Is part of cflinuxfs3 but separate package in SUSE distributions -->
     <package name="which"/>
