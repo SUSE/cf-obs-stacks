@@ -46,6 +46,7 @@ Requires: tar
 Requires: bzip2
 Requires: mawk
 Requires: netcat-openbsd
+Requires: python
 
 # CF packages - https://github.com/cloudfoundry/cflinuxfs3/blob/master/packages/cflinuxfs3
 Requires: autoconf
