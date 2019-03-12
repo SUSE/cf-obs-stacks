@@ -1,0 +1,13 @@
+<services>
+  <service name="obs_scm">
+    <param name="extract">images/kiwi/sle15/sle15.kiwi</param>
+    <param name="extract">images/kiwi/sle15/config.sh</param>
+    <param name="extract">images/kiwi/sle15/_service</param>
+    <param name="url">git://github.com/SUSE/cf-obs-stacks.git</param>
+    <param name="revision">master</param>
+    <param name="scm">git</param>
+    <param name="changesgenerate">enable</param>
+    <param name="changesauthor">edigiacinto@suse.com</param>
+  </service>
+</services>
+
