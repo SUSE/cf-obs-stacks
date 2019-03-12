@@ -29,12 +29,6 @@ suseSetupProduct
 suseImportBuildKey
 
 #======================================
-# Add our packages repo
-#--------------------------------------
-rpm --import repo_key.asc
-rm -f repo_key.asc
-
-#======================================
 # Disable recommends
 #--------------------------------------
 sed -i 's/.*solver.onlyRequires.*/solver.onlyRequires = true/g' /etc/zypp/zypp.conf
