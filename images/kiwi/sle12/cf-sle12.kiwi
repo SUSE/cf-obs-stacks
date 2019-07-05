@@ -22,9 +22,6 @@
     <keytable>us.map.gz</keytable>
     <hwclock>utc</hwclock>
   </preferences>
-  <users group="root">
-    <user home="/root" name="root"/>
-  </users>
   <repository>
     <source path="obsrepositories:/"/>
   </repository>

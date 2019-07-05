@@ -56,7 +56,7 @@ echo "custom_shebang: /usr/bin/env ruby" >> /etc/gemrc
 
 # Add our packages repo
 rpm --import repo_key.asc
-sudo zypper --non-interactive ar --no-check --type rpm-md https://download.opensuse.org/repositories/Cloud:/Platform:/Stack-SLE:/packages/SLE_12_SP3/ packages
+sudo zypper --non-interactive ar --no-check --type rpm-md https://download.opensuse.org/repositories/Cloud:/Platform:/Stack-SLE:/packages/SLE_12_SP4/ packages
 
 #======================================
 # Setup baseproduct link
