@@ -69,8 +69,8 @@
     <package name="ghostscript-fonts"/>
     <!-- gss-ntlmssp-dev -->
     <package name="iproute2"/>
-    <package name="arping2"/>
     <package name="ImageMagick"/>
+    <package name="arping2"/>
     <package name="iputils"/>
     <package name="jq"/>
     <package name="krb5"/>
