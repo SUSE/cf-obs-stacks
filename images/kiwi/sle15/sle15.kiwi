@@ -90,7 +90,7 @@
     <package name="libfl-devel"/>
     <package name="libfribidi0"/>
     <package name="libgcrypt-devel"/>
-    <package name="gdk-pixbuf-devel"/>
+    <package name="gd-devel"/>
     <package name="gmp-devel"/>
     <package name="libgnutls-devel"/>
     <package name="libgnutlsxx-devel"/>

@@ -82,7 +82,7 @@ Requires: libffi-devel
 Requires: libfl-devel
 Requires: libfribidi0
 Requires: libgcrypt-devel
-Requires: gdk-pixbuf-devel
+Requires: gd-devel
 Requires: gmp-devel
 Requires: libgnutls-devel
 Requires: libgnutlsxx-devel
