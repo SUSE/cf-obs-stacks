@@ -12,12 +12,13 @@
         name="sle15"
         tag="%RELEASE%"
         additionaltags="latest"
-        maintainer="Tim Hardeck &lt;thardeck@suse.com&gt;"/>
+        maintainer="Tim Hardeck &lt;thardeck@suse.com&gt;">
         <labels>
           <label name="org.opencontainers.image.title" value="SLE stack for CloudFoundry."/>
           <label name="org.opencontainers.image.version" value="%RELEASE%"/>
           <label name="org.opencontainers.image.created" value="%BUILDTIME%"/>
         </labels>
+      </containerconfig>
     </type>
     <version>1.0.0</version>
     <packagemanager>zypper</packagemanager>
