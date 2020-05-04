@@ -1,4 +1,5 @@
 <services>
+  <service mode="buildtime" name="kiwi_metainfo_helper"/>
   <service name="obs_scm">
     <param name="extract">images/kiwi/sle15/sle15.kiwi</param>
     <param name="extract">images/kiwi/sle15/config.sh</param>
@@ -8,6 +9,5 @@
     <param name="changesgenerate">enable</param>
     <param name="changesauthor">edigiacinto@suse.com</param>
   </service>
-  <service mode="buildtime" name="kiwi_metainfo_helper"/>
 </services>
 
