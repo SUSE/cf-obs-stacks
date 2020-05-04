@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.8" name="sle15">
+<image schemaversion="6.8" name="sle15" xmlns:suse_label_helper="com.suse.label_helper">
   <description type="system">
     <author>Tim Hardeck</author>
     <contact>thardeck@suse.de</contact>

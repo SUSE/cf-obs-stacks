@@ -8,5 +8,7 @@
     <param name="changesgenerate">enable</param>
     <param name="changesauthor">edigiacinto@suse.com</param>
   </service>
+  <service mode="buildtime" name="kiwi_metainfo_helper"/>
+  <service mode="buildtime" name="kiwi_label_helper"/>
 </services>
 
