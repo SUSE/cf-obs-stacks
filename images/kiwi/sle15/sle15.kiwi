@@ -61,7 +61,7 @@
     <package name="bison"/>
     <package name="bzr"/>
     <package name="ca-certificates"/>
-    <package name="cmake"/>
+    <package name="cmake-full"/>
     <!-- comerr-dev -->
     <package name="cron"/>
     <package name="curl"/>
